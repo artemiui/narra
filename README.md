@@ -2,6 +2,9 @@
 
 A keyboard-native, single-file Markdown and LaTeX editor for Windows and Linux. Can be used in tandem with nvim as frontend.
 
+<img width="1920" height="1080" alt="typing" src="https://github.com/user-attachments/assets/7c17d6d7-1c87-42e8-83a0-c830a13e86b7" />
+*Typing on Narra*
+
 ## Install from source
 
 Install Node.js 22, npm and stable Rust. Builds on Windows require MSVC C++ Build Tools and WebView2. On Linux install the Tauri v2 WebKitGTK 4.1 development prerequisites, Fontconfig headers and libxdo development files.
