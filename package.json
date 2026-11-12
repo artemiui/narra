@@ -1,0 +1,29 @@
+{
+  "name": "narra",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 1420 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6",
+    "@codemirror/view": "^6",
+    "@codemirror/commands": "^6",
+    "@codemirror/lang-markdown": "^6",
+    "@codemirror/language": "^6",
+    "@codemirror/autocomplete": "^6",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2",
+    "katex": "^0.16",
+    "marked": "^15"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16",
+    "@tauri-apps/cli": "^2",
+    "vite": "^6",
+    "typescript": "^5"
+  }
+}

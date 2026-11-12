@@ -1,0 +1,52 @@
+// Each @ marks an editable field, in Tab order.
+export const structures: Record<string, string> = {
+  "Math: Parentheses (Auto-Sizing)": String.raw`\left( @ \right)`,
+  "Math: Square Brackets (Auto-Sizing)": "\\left[ @ \\right]",
+  "Math: Curly Braces / Set Builder": "\\left\\{ @ \\right\\}",
+  "Math: Absolute Value": "\\left| @ \\right|",
+  "Math: Vector Norm": "\\left\\| @ \\right\\|",
+  "Math: Inner Product": "\\left\\langle @, @ \\right\\rangle",
+  "Math: Floor": "\\lfloor @ \\rfloor",
+  "Math: Ceiling": "\\lceil @ \\rceil",
+  "Math: Inline Equation": "$@$",
+  "Math: Display Block Equation": "$$\n@\n$$",
+  "Math: Fraction": "\\frac{@}{@}",
+  "Math: Square Root": "\\sqrt{@}",
+  "Math: Nth Root": "\\sqrt[@]{@}",
+  "Math: Superscript / Power": "@^{@}",
+  "Math: Subscript": "@_{@}",
+  "Calculus: Limit": "\\lim_{x \\to @} @",
+  "Calculus: Indefinite Integral": "\\int @ \\,dx",
+  "Calculus: Definite Integral": "\\int_{@}^{@} @ \\,dx",
+  "Calculus: Double Integral": "\\iint_{@} @ \\,dA",
+  "Calculus: Triple Integral": "\\iiint_{@} @ \\,dV",
+  "Calculus: Contour Integral": "\\oint_{@} @ \\,ds",
+  "Calculus: Ordinary Derivative": "\\frac{d@}{d@}",
+  "Calculus: Partial Derivative": "\\frac{\\partial @}{\\partial @}",
+  "Calculus: Nth Derivative": "\\frac{d^{@}@}{d@^{@}}",
+  "Calculus: Mixed Partial": "\\frac{\\partial^2 @}{\\partial @ \\partial @}",
+  "Calculus: Summation": "\\sum_{i=@}^{@} @",
+  "Calculus: Product": "\\prod_{i=@}^{@} @",
+  "Linear Algebra: Cross Product": "\\mathbf{@} \\times \\mathbf{@}",
+  "Linear Algebra: Dot Product": "\\mathbf{@} \\cdot \\mathbf{@}",
+  "Math: Piecewise Function (Cases)":
+    "\\begin{cases}@ & @ \\\\\n@ & @\\end{cases}",
+  "Math: Aligned Multi-Line Equations":
+    "\\begin{aligned}@ &= @ \\\\\n@ &= @\\end{aligned}",
+  "Format: Heading 1": "# @",
+  "Format: Heading 2": "## @",
+  "Format: Heading 3": "### @",
+  "Format: Bold": "**@**",
+  "Format: Italic": "*@*",
+  "Format: Inline Code": "\x60@\x60",
+  "Format: Code Block": "\x60\x60\x60\n@\n\x60\x60\x60",
+  "Format: Blockquote": "> @",
+  "Format: Horizontal Divider": "\n---\n@",
+};
+for (const [name, env] of Object.entries({
+  Parenthesis: "pmatrix",
+  Bracket: "bmatrix",
+  Determinant: "vmatrix",
+}))
+  structures["Linear Algebra: " + name + " Matrix (2x2)"] =
+    "\\begin{" + env + "}@ & @ \\\\ @ & @\\end{" + env + "}";
