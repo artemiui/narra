@@ -28,6 +28,8 @@ Open Preferences with Ctrl+, to change the theme, fonts, writing width, caret, m
 
 ## Development
 
+Browse the [documentation](docs/README.md) for installation, usage, configuration, architecture, contributor guidance and troubleshooting.
+
 Run `npm ci` followed by `npm run tauri -- dev -- -- --wait`. For browser-only work, run `npm run dev`. Native file watching, system font discovery and CLI routing require the desktop runtime. Run `npm run build` to type-check and bundle the frontend.
 
 

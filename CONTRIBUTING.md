@@ -1,5 +1,7 @@
 # Contributing
 
+See the [extended contributor guide](docs/contributing.md) and [architecture documentation](docs/architecture.md) for implementation details and verification guidance.
+
 Add command-palette templates to `src/commands/structures.ts`. Each @ marks an editable field. The first field receives selected text. Add executable actions in `src/main.ts`.
 
 Add individual symbols in `src/commands/symbols.ts` using command, space-separated aliases and display name separated by vertical bars. Groups carry their searchable category. Greek and number-set aliases use exact case.
